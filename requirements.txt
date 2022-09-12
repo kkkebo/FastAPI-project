@@ -1,0 +1,7 @@
+fastapi==0.70.0
+uvicorn==0.15.0
+SQLAlchemy
+pytest==6.2.5
+requests
+poetry
+pydantic
