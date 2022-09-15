@@ -8,6 +8,12 @@ packages = [{include = "fastapi_project"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+uvicorn = "^0.16.0"
+fastapi = "^0.70.1"
+pydantic = "^1.8.2"
+SQLAlchemy = "^1.4.28"
+psycopg2-binary = "^2.9.2"
+SQLAlchemy-Utils = "^0.37.9"
 
 
 [build-system]

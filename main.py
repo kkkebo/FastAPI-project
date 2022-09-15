@@ -1,8 +1,12 @@
-import uvicorn
+
 from api import users, sections, courses
-from fastapi import Query, FastAPI, Path
-from pydantic import BaseModel
-from typing import Optional, List
+from fastapi import FastAPI
+
+from database.db_setup import engine
+from database.models import user, course
+
+user.Base.metadata.create_all(bind=engine)
+course.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title='Fast API studying',
