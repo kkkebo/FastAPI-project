@@ -1,4 +1,3 @@
-
 from api import users, sections, courses
 from fastapi import FastAPI
 
