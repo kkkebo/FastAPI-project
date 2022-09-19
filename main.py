@@ -8,16 +8,16 @@ user.Base.metadata.create_all(bind=engine)
 course.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title='Fast API studying',
-    description='API for studying fastAPI framework',
-    version='0.0.1',
+    title="Fast API studying",
+    description="API for studying fastAPI framework",
+    version="0.0.1",
     contact={
-        'name': 'Andrei',
-        'email': 'andrey.k@exmpl.com',
+        "name": "Andrei",
+        "email": "andrey.k@exmpl.com",
     },
     license_info={
-        'name': 'MIT',
-    }
+        "name": "MIT",
+    },
 )
 
 app.include_router(users.router)

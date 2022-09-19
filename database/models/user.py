@@ -6,6 +6,7 @@ from sqlalchemy.orm import relationship
 from database.db_setup import Base
 from database.models.mixins import Timestamp
 
+
 class Role(enum.IntEnum):
     teacher = 1
     student = 2
@@ -22,7 +23,9 @@ class User(Timestamp, Base):
     profile = relationship("Profile", back_populates="owner", uselist=False)
     student_courses = relationship("StudentCourse", back_populates="student")
     student_content_blocks = relationship(
-        "CompletedContentBlock", back_populates="student")
+        "CompletedContentBlock", back_populates="student"
+    )
+
 
 class Profile(Timestamp, Base):
     __tablename__ = "profiles"
@@ -34,7 +37,3 @@ class Profile(Timestamp, Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
 
     owner = relationship("User", back_populates="profile")
-
-
-
-
